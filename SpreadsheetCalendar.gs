@@ -41,7 +41,7 @@ function proCalendar() {
   var j = 2 ;
   var dataRange = sheet.getRange(j, 1,lastRow , 8); //
   var data = dataRange.getValues();
-  var cal = CalendarApp.getCalendarById('intraway.com_88dqbda8j0u6rkt37nrl5h07nk@group.calendar.google.com'); //Calendar ID de Board Calendar
+  var cal = CalendarApp.getCalendarById('yourcalendarID@group.calendar.google.com'); //Calendar ID de Board Calendar
   for (i in data) {
     // Logger.log(data[i])
     
