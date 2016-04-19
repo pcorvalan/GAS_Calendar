@@ -9,30 +9,6 @@ function onOpen() {
 // scriptProperties.setProperty('trackChange', 'true');
 }
 
-function onEdit(event)
-{
-  var scriptProperties = PropertiesService.getScriptProperties();
-  var value = scriptProperties.getProperty('trackChange');
-  Logger.log(value);
-  if(value =='true'){
-    
-    var ss = event.range.getSheet();
-    var changedCell = event.source.getActiveRange();
-    var background = 'red';
-    changedCell.setBackground(background);
-  }
-}
-
-
-function changeTrack() {
-  var scriptProperties = PropertiesService.getScriptProperties();
-  var value = scriptProperties.getProperty('trackChange');
-  if(value =='true'){
- scriptProperties.setProperty('trackChange', 'false');
-  } else {
- scriptProperties.setProperty('trackChange', 'true');
-  }
-}
 
 function proCalendar() {
   var ss = SpreadsheetApp.getActiveSpreadsheet()
